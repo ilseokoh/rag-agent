@@ -50,3 +50,16 @@ Great! Proceed the implementation with the plan @docs/implementation_plan.md
 
 @docs/llms-full.txt
 ```
+
+## Deploying the Agent
+
+다음 명령어를 사용하여 에이전트를 Vertex AI 에이전트 엔진에 배포할 수 있습니다.
+```bash
+uv run python deployment/deploy.py
+```
+에이전트 배포 후 다음과 같은 INFO 로그 메시지가 표시됩니다.
+```
+Deployed agent to Vertex AI Agent Engine successfully, resource name: projects/<PROJECT_NUMBER>/locations/us-central1/reasoningEngines/<AGENT_ENGINE_ID>
+```
+
+원격 에이전트 테스트에 필수적인 에이전트 엔진 리소스 이름을 기록해 두고 `.env` 파일을 업데이트하십시오.
