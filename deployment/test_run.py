@@ -1,3 +1,5 @@
+# Google Cloud Docs: https://docs.cloud.google.com/agent-builder/agent-engine/use/adk?hl=ko
+
 import os
 import vertexai
 from vertexai import agent_engines
@@ -44,7 +46,7 @@ load_dotenv()
 
 vertexai.init(
     project=os.getenv("GOOGLE_CLOUD_PROJECT"),
-    location=os.getenv("GOOGLE_CLOUD_LOCATION"),
+    location=os.getenv("AGENT_ENGINE_LOCATION"),
 )
 
 session_service = VertexAiSessionService(project=os.getenv("GOOGLE_CLOUD_PROJECT"),location=os.getenv("AGENT_ENGINE_LOCATION"))
