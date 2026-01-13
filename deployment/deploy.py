@@ -18,7 +18,8 @@ from google.adk.memory import VertexAiMemoryBankService
 GOOGLE_CLOUD_PROJECT = os.getenv("GOOGLE_CLOUD_PROJECT")
 AGENT_ENGINE_LOCATION = os.getenv("AGENT_ENGINE_LOCATION")
 STAGING_BUCKET = os.getenv("STAGING_BUCKET")
-RAG_CORPUS = os.getenv("RAG_CORPUS")
+HR_RAG_CORPUS = os.getenv("HR_RAG_CORPUS")
+IT_RAG_CORPUS = os.getenv("IT_RAG_CORPUS")
 MODEL_ID = os.getenv("MODEL_ID")
 # Define the path to the .env file relative to this script
 ENV_FILE_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".env"))
@@ -79,7 +80,8 @@ if existed_agent:
             "gcs_dir_name": "dev",
             "staging_bucket": STAGING_BUCKET,
             "env_vars": {
-                "RAG_CORPUS": RAG_CORPUS,
+                "HR_RAG_CORPUS": HR_RAG_CORPUS,
+                "IT_RAG_CORPUS": IT_RAG_CORPUS,
                 "MODEL_ID": MODEL_ID
             }
         }
@@ -117,7 +119,8 @@ else:
             "gcs_dir_name": "dev",
             "staging_bucket": STAGING_BUCKET,
             "env_vars": {
-                "RAG_CORPUS": RAG_CORPUS,
+                "HR_RAG_CORPUS": HR_RAG_CORPUS,
+                "IT_RAG_CORPUS": IT_RAG_CORPUS,
                 "MODEL_ID": MODEL_ID
             }
         }
